@@ -57,13 +57,17 @@ const uppercaseArray = myArray.map( (y) => y.charAt(0).toUpperCase() + y.slice(1
 console.log(uppercaseArray)
 
 
+//my array of names
 const htmlArr = ["Lars", "Peter", "Jan", "Ian"]
 
-let htmlstr = '<ul><li>'
+//just html start and close tags, declaring them outside the scope of the for loop.
+let htmlstart = '<ul><li>'
+let htmlclose = '</li></ul>'
 
+//Our loop that takes our array and converts it into an html 'ul' list.
 for (var i = 0; i < htmlArr.length; i++) 
 {
     var place = htmlArr[i];
-    let html = htmlstr + htmlArr.join("</li><li>") + htmlstr
+    let html = htmlstart + htmlArr.join("</li><li>") + htmlclose
     console.log(html)
 }
