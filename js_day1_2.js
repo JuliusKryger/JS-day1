@@ -41,11 +41,15 @@ function add(n1, n2){
 
   console.log(cb(3,"hh",add));// This is actually kind of werid, i did not expect this one too work as "hh" parameter should've given us the "NaN" error, but the add function ignores this and just add the string at the end of the first number parameter.
   
-  console.log(cb(10, 2, mul)) //testing our simple function that takes two parameters and divide them.
+  console.log(cb(10, 2, mul)) // testing our simple function that takes two parameters and divide them.
+
+// My array of strings.
+const myArray = ["bob", "hans", "mia", "sine"]
 
 // Here we create an array, give it some names, then we filter that array based on the lenght of the strings and make a new array of those that pass the filtering.
-const myArray = ["Bob", "Hans", "Mia", "Sine"]
 const newArray = myArray.filter( (x) => x.length <= 3)
-
 console.log(newArray)
+
+const uppercaseArray = myArray.map( (y) => y.charAt(0).toUpperCase() + y.slice(1))
+console.log(uppercaseArray)
 
