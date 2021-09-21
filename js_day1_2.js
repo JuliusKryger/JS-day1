@@ -50,6 +50,20 @@ const myArray = ["bob", "hans", "mia", "sine"]
 const newArray = myArray.filter( (x) => x.length <= 3)
 console.log(newArray)
 
+// y.charAt(0).toUpperCase() means we take the first letter of the string at every index, and then we uppercase it.
+// then we say + y.slice(1), which cuts away the first letter and prints out the rest of the string at every index.
+// This in combination gives us an array where the first letter of every index is uppercased and we still get the whole string printed out.
 const uppercaseArray = myArray.map( (y) => y.charAt(0).toUpperCase() + y.slice(1))
 console.log(uppercaseArray)
 
+
+const htmlArr = ["Lars", "Peter", "Jan", "Ian"]
+
+let htmlstr = '<ul><li>'
+
+for (var i = 0; i < htmlArr.length; i++) 
+{
+    var place = htmlArr[i];
+    let html = htmlstr + htmlArr.join("</li><li>") + htmlstr
+    console.log(html)
+}
